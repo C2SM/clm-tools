@@ -1,0 +1,62 @@
+#
+####################################################
+#
+#     Dependencies of ccaf2icaf Modules
+#
+####################################################
+#
+
+$(OBJDIR)/mo_c2i_checks.o:            $(SRCDIR)/mo_c2i_checks.f90     \
+	$(OBJDIR)/mo_c2i_data.o \
+	$(OBJDIR)/mo_c2i_create.o  $(OBJDIR)/mo_utils.o     
+	echo compiling mo_c2i_checks.f90
+	( cd $(OBJDIR) && $(FC) $(FFLAGS) $(SRCDIR)/mo_c2i_checks.f90 )
+
+$(OBJDIR)/mo_c2i_create.o:            $(SRCDIR)/mo_c2i_create.f90   \
+	$(OBJDIR)/mo_utils.o     
+	echo compiling mo_c2i_create.f90
+	( cd $(OBJDIR) && $(FC) $(FFLAGS) $(SRCDIR)/mo_c2i_create.f90 )
+
+$(OBJDIR)/mo_c2i_data.o:            $(SRCDIR)/mo_c2i_data.f90 
+	echo compiling mo_c2i_data.f90
+	( cd $(OBJDIR) && $(FC) $(FFLAGS) $(SRCDIR)/mo_c2i_data.f90 )
+
+$(OBJDIR)/mo_c2i_soil.o:            $(SRCDIR)/mo_c2i_soil.f90      \
+	$(OBJDIR)/mo_c2i_data.o $(OBJDIR)/mo_utils.o     
+	echo compiling mo_c2i_soil.f90
+	( cd $(OBJDIR) && $(FC) $(FFLAGS) $(SRCDIR)/mo_c2i_soil.f90 )
+
+$(OBJDIR)/mo_utils.o:            $(SRCDIR)/mo_utils.f90
+	echo compiling mo_utils.f90
+	( cd $(OBJDIR) && $(FC) $(FFLAGS) $(SRCDIR)/mo_utils.f90 )
+
+#
+################################################################################
+#
+#  Dependencies of the ccaf2icaf Main Program
+#
+################################################################################
+#
+
+$(OBJDIR)/ccaf2icaf.o:           $(SRCDIR)/ccaf2icaf.f90 \
+	$(OBJDIR)/mo_c2i_checks.o  $(OBJDIR)/mo_c2i_create.o \
+	$(OBJDIR)/mo_c2i_data.o \
+	$(OBJDIR)/mo_c2i_soil.o    $(OBJDIR)/mo_utils.o
+	echo compiling ccaf2icaf.f90
+	( cd $(OBJDIR) && $(FC) $(FFLAGS) $(SRCDIR)/ccaf2icaf.f90 )
+
+
+#
+################################################################################
+#
+#  Dependencies of the correct_cf Main Program
+#
+################################################################################
+#
+
+$(OBJDIR)/correct_cf.o:           $(SRCDIR)/correct_cf.f90 \
+	$(OBJDIR)/mo_utils.o
+	echo compiling correct_cf.f90
+	( cd $(OBJDIR) && $(FC) $(FFLAGS) $(SRCDIR)/correct_cf.f90 )
+
+

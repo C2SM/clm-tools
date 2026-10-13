@@ -1,0 +1,11 @@
+#
+CCAF2ICAF_OBJ      =   $(OBJDIR)/mo_c2i_checks.o          \
+                       $(OBJDIR)/mo_c2i_create.o          \
+                       $(OBJDIR)/mo_c2i_data.o            \
+                       $(OBJDIR)/mo_c2i_soil.o            \
+                       $(OBJDIR)/ccaf2icaf.o
+
+CORRECT_CF_OBJ     =   $(OBJDIR)/correct_cf.o
+
+UTILS_OBJ          =   $(OBJDIR)/mo_utils.o 
+

@@ -1,0 +1,33 @@
+#########
+# gfortran at Alps (CSCS) - climtools UE only
+#########
+
+# Compiler from climtools UE
+FC = /user-environment/env/climtools/bin/gfortran
+
+# NetCDF root in climtools UE
+NETCDF_ROOT = /user-environment/env/climtools
+
+# Include and library flags
+NC_INC = -I$(NETCDF_ROOT)/include
+
+# Library paths: Fortran in lib, C in lib64
+NC_LIB = -L$(NETCDF_ROOT)/lib -lnetcdff \
+         -L$(NETCDF_ROOT)/lib64 -lnetcdf
+
+# Extra libraries
+NC_LIB += -ldl -lm
+
+# Standard binary
+PROGRAM      = bin/cfu
+
+# Compiler flags
+FFLAGS       = -c -ffree-line-length-none $(NC_INC)
+
+# Linker flags
+LDFLAGS      =
+
+# Libraries
+LIBS         = $(NC_LIB)
+LIBS        += -Wl,-rpath,$(NETCDFF_ROOT)/lib:$(NETCDFC_ROOT)/lib64
+

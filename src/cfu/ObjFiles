@@ -1,0 +1,26 @@
+#
+####################################################
+#
+#     Declaration of the Object Files
+#
+####################################################
+#
+OBJECTS      =    $(OBJDIR)/add_hours.o \
+                  $(OBJDIR)/add_lonlat.o \
+                  $(OBJDIR)/add_months.o \
+                  $(OBJDIR)/add_vertices.o \
+                  $(OBJDIR)/check_files.o \
+                  $(OBJDIR)/check_files_iso.o \
+                  $(OBJDIR)/get_attval.o \
+                  $(OBJDIR)/get_hours.o \
+                  $(OBJDIR)/get_next_dates.o \
+                  $(OBJDIR)/get_prev_date.o \
+                  $(OBJDIR)/icon_domain.o \
+                  $(OBJDIR)/mo_kind.o \
+                  $(OBJDIR)/mo_create_rotgrid.o \
+                  $(OBJDIR)/mo_utilities.o \
+                  $(OBJDIR)/p2sec.o \
+                  $(OBJDIR)/shellpp.o \
+                  $(OBJDIR)/tbtimestamp.o \
+                  $(OBJDIR)/cfu.o
+

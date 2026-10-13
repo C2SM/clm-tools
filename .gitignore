@@ -1,0 +1,7 @@
+.DS_Store
+src/*/Fopts
+src/*/obj/
+src/*/bin/
+src/*/lib/
+src/*/include/
+venv/

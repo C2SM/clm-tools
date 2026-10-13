@@ -1,0 +1,80 @@
+#
+####################################################
+#
+#     Dependencies of the Data Modules
+#
+####################################################
+#
+$(OBJDIR)/add_hours.o:            $(SRCDIR)/add_hours.f90
+	( cd $(OBJDIR) && echo Compile ${@F} && $(FC) $(FFLAGS) $(SRCDIR)/add_hours.f90 )
+
+$(OBJDIR)/add_lonlat.o:            $(SRCDIR)/add_lonlat.f90 \
+                                   $(OBJDIR)/mo_utilities.o
+	( cd $(OBJDIR) && echo Compile ${@F} && $(FC) $(FFLAGS) $(SRCDIR)/add_lonlat.f90 )
+
+$(OBJDIR)/add_months.o:            $(SRCDIR)/add_months.f90
+	( cd $(OBJDIR) && echo Compile ${@F} && $(FC) $(FFLAGS) $(SRCDIR)/add_months.f90 )
+
+$(OBJDIR)/add_vertices.o:            $(SRCDIR)/add_vertices.f90 \
+                                   $(OBJDIR)/mo_utilities.o
+	( cd $(OBJDIR) && echo Compile ${@F} && $(FC) $(FFLAGS) $(SRCDIR)/add_vertices.f90 )
+
+$(OBJDIR)/check_files.o:            $(SRCDIR)/check_files.f90 \
+                                   $(OBJDIR)/mo_utilities.o
+	( cd $(OBJDIR) && echo Compile ${@F} && $(FC) $(FFLAGS) $(SRCDIR)/check_files.f90 )
+
+$(OBJDIR)/check_files_iso.o:            $(SRCDIR)/check_files_iso.f90 \
+                                   $(OBJDIR)/mo_utilities.o
+	( cd $(OBJDIR) && echo Compile ${@F} && $(FC) $(FFLAGS) $(SRCDIR)/check_files_iso.f90 )
+
+$(OBJDIR)/get_attval.o:            $(SRCDIR)/get_attval.f90
+	( cd $(OBJDIR) && echo Compile ${@F} && $(FC) $(FFLAGS) $(SRCDIR)/get_attval.f90 )
+
+$(OBJDIR)/get_hours.o:            $(SRCDIR)/get_hours.f90
+	( cd $(OBJDIR) && echo Compile ${@F} && $(FC) $(FFLAGS) $(SRCDIR)/get_hours.f90 )
+
+$(OBJDIR)/get_next_dates.o:            $(SRCDIR)/get_next_dates.f90
+	( cd $(OBJDIR) && echo Compile ${@F} && $(FC) $(FFLAGS) $(SRCDIR)/get_next_dates.f90 )
+
+$(OBJDIR)/get_prev_date.o:            $(SRCDIR)/get_prev_date.f90
+	( cd $(OBJDIR) && echo Compile ${@F} && $(FC) $(FFLAGS) $(SRCDIR)/get_prev_date.f90 )
+
+$(OBJDIR)/icon_domain.o:            $(SRCDIR)/icon_domain.f90
+	( cd $(OBJDIR) && echo Compile ${@F} && $(FC) $(FFLAGS) $(SRCDIR)/icon_domain.f90 )
+
+$(OBJDIR)/mo_create_rotgrid.o:            $(SRCDIR)/mo_create_rotgrid.f90 \
+                                   $(OBJDIR)/mo_kind.o \
+                                   $(OBJDIR)/mo_utilities.o
+	( cd $(OBJDIR) && echo Compile ${@F} && $(FC) $(FFLAGS) $(SRCDIR)/mo_create_rotgrid.f90 )
+
+$(OBJDIR)/mo_kind.o:            $(SRCDIR)/mo_kind.f90
+	( cd $(OBJDIR) && echo Compile ${@F} && $(FC) $(FFLAGS) $(SRCDIR)/mo_kind.f90 )
+
+$(OBJDIR)/mo_utilities.o:            $(SRCDIR)/mo_utilities.f90\
+                                   $(OBJDIR)/mo_kind.o
+	( cd $(OBJDIR) && echo Compile ${@F} && $(FC) $(FFLAGS) $(SRCDIR)/mo_utilities.f90 )
+
+$(OBJDIR)/p2sec.o:            $(SRCDIR)/p2sec.f90\
+                                   $(OBJDIR)/mo_kind.o
+	( cd $(OBJDIR) && echo Compile ${@F} && $(FC) $(FFLAGS) $(SRCDIR)/p2sec.f90 )
+
+$(OBJDIR)/shellpp.o:            $(SRCDIR)/shellpp.f90
+	( cd $(OBJDIR) && echo Compile ${@F} && $(FC) $(FFLAGS) $(SRCDIR)/shellpp.f90 )
+
+$(OBJDIR)/tbtimestamp.o:            $(SRCDIR)/tbtimestamp.f90 \
+                                   $(OBJDIR)/mo_utilities.o
+	( cd $(OBJDIR) && echo Compile ${@F} && $(FC) $(FFLAGS) $(SRCDIR)/tbtimestamp.f90 )
+
+$(OBJDIR)/cfu.o:            $(SRCDIR)/cfu.f90 \
+                            $(OBJDIR)/mo_kind.o \
+                            $(OBJDIR)/mo_utilities.o \
+                            $(OBJDIR)/add_hours.o  $(OBJDIR)/add_months.o \
+                            $(OBJDIR)/check_files.o $(OBJDIR)/check_files_iso.o \
+                            $(OBJDIR)/get_attval.o \
+                            $(OBJDIR)/get_hours.o \
+                            $(OBJDIR)/get_next_dates.o \
+                            $(OBJDIR)/get_prev_date.o \
+                            $(OBJDIR)/icon_domain.o \
+                            $(OBJDIR)/add_lonlat.o \
+                            $(OBJDIR)/shellpp.o
+	( cd $(OBJDIR) && echo Compile ${@F} && $(FC) $(FFLAGS) $(SRCDIR)/cfu.f90 )

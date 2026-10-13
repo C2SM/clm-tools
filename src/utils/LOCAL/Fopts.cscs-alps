@@ -1,0 +1,34 @@
+#########
+# gfortran at Alps (CSCS) - climtools UE only
+#########
+
+# Compiler from climtools UE
+FC = /user-environment/env/climtools/bin/gfortran
+
+# NetCDF root in climtools UE
+NETCDF_ROOT = /user-environment/env/climtools
+
+# Include and library flags
+NC_INC = -I$(NETCDF_ROOT)/include
+
+# Library paths: Fortran in lib, C in lib64
+NC_LIB = -L$(NETCDF_ROOT)/lib -lnetcdff \
+         -L$(NETCDF_ROOT)/lib64 -lnetcdf
+
+# CSV Library
+CSV_ROOT = $(PARENTDIR)/fortran-csv-lib
+CSV_INC = -I${CSV_ROOT}/include
+CSV_LIB = -L${CSV_ROOT}/lib -lcsv
+
+# Name and path of standard binary to be produced
+CCAF2ICAF_PROGRAM      = bin/ccaf2icaf
+CORRECT_CF_PROGRAM     = bin/correct_cf
+
+# Compiler flags
+FFLAGS      = -c ${CSV_INC} ${NC_INC} -ffree-line-length-none
+
+# Linker flags
+LDFLAGS     = 
+
+LIBS        = ${NC_LIB} ${CSV_LIB}
+LIBS       += -Wl,-rpath,$(NETCDFF_ROOT)/lib:$(NETCDFC_ROOT)/lib64:$(CSV_ROOT)/lib

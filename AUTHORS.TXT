@@ -1,0 +1,23 @@
+# SPICE AUTHORS
+
+List of authors in the SPICE repository including all branches.
+Burkhardt Rockel,
+Ha Ho-Hagemann,
+Beate Geyer,
+Sergei Petrov,
+Nadja Samtleben,
+Klaus Keuler,
+Trang Van Pham,
+Christian Steger,
+Christopher Purr,
+Shweta Singh,
+Susanne Brienen,
+Vera Maurer,
+Evgenii Churiulin,
+Patrick Ludwig,
+Soner Cagatay Bagcaci,
+Pavel Khain,
+Ronny Petrik,
+Heimo Truhetz,
+Stefan Poll,
+Michael Jähn

@@ -1,0 +1,10 @@
+####################################################
+#
+#     Declaration of the Object Files
+#
+####################################################
+#
+OBJECTS      =   $(OBJDIR)/csv_kinds.o                          \
+                 $(OBJDIR)/csv_module.o         \
+                 $(OBJDIR)/csv_parameters.o             \
+                 $(OBJDIR)/csv_utilities.o         

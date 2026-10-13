@@ -1,0 +1,13 @@
+#
+####################################################
+#
+#     Dependencies of the Binary Files
+#
+####################################################
+#
+$(EXEDIR)/ccaf2icaf:           $(SRCDIR)/ccaf2icaf.f90
+	( cd $(EXEDIR) && echo Compile ${@F} && $(FC) -o $(EXEDIR)/ccaf2icaf $(SRCDIR)/ccaf2icaf.f90  $(COMFLGS) )
+
+$(EXEDIR)/correct_cf:           $(SRCDIR)/correct_cf.f90
+	( cd $(EXEDIR) && echo Compile ${@F} && $(FC) -o $(EXEDIR)/correct_cf $(SRCDIR)/correct_cf.f90  $(COMFLGS) )
+#

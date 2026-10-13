@@ -1,0 +1,11 @@
+#
+####################################################
+#
+#     Declaration of the Executables 
+#
+####################################################
+#
+EXECUTABLES      =    $(EXEDIR)/ccaf2icaf \
+                      $(EXEDIR)/correct_cf
+
+

@@ -1,0 +1,2 @@
+# Keep the line endings of the SPICE files unchanged
+*.csv -text

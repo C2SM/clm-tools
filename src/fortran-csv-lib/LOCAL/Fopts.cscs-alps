@@ -1,0 +1,10 @@
+#########
+# gfortran at Alps (CSCS)
+#########
+#
+
+# fortran options
+FC            = gfortran -c
+FFLAGS        = -I$(STDROOT)/obj
+LDFLAGS       = $(FFLAGS)
+

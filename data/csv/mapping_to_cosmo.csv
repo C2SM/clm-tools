@@ -1,0 +1,159 @@
+ICON name,Output name,A Output name,height,cell_methods,standard_name,A standard_name,A units
+aer_bc         ,AER_BC     ,-,0,point,-,-,-
+aer_du         ,AER_DUST   ,-,0,point,-,-,-
+aer_or         ,AER_ORG    ,-,0,point,-,-,-
+aer_su         ,AER_SO4    ,-,0,point,-,-,-
+aer_ss         ,AER_SS     ,-,0,point,-,-,-
+aqhfl_s        ,AQHFL_S    ,-,0,mean ,water_evaporation_amount,-,-
+alhfl_s        ,ALHFL_S    ,-,0,mean ,surface_downward_latent_heat_flux,-,-
+albdif         ,ALB_RAD    ,-,0,point,surface_albedo,-,-
+albnirdif      ,ALB_NI_DIF ,-,0,point,surface_albedo_ni_dif,-,-
+albvisdif      ,ALB_VIS_DIF ,-,0,point,surface_albedo_vis_dif,-,-
+aod_550nm      ,AOD_550NM  ,-,0,point,atmosphere_optical_thickness,-,-
+athd_s         ,ATHD_S     ,-,0,mean ,surface_downwelling_longwave_flux_in_air,-,-
+athu_s         ,ATHU_S     ,-,0,mean ,surface_upwelling_longwave_flux_in_air,-,-
+asob_s         ,ASOB_S     ,-,0,mean ,surface_net_downward_shortwave_flux,-,-
+asob_t         ,ASOB_T     ,-,0,mean ,net_downward_shortwave_flux_in_air,-,-
+asod_t         ,ASOD_T     ,-,0,mean ,toa_incoming_shortwave_flux,-,-
+ashfl_s        ,ASHFL_S    ,-,0,mean ,surface_downward_sensible_heat_flux,-,-
+asodifd_s      ,ASODIFD_S  ,-,0,mean ,surface_diffuse_downwelling_shortwave_flux_in_air,-,-
+asodifu_s      ,ASODIFU_S  ,-,0,mean ,surface_upwelling_shortwave_flux_in_air,-,-
+asodird_s      ,ASODIRD_S  ,-,0,mean ,surface_direct_downwelling_shortwave_flux_in_air,-,-
+athb_s         ,ATHB_S     ,-,0,mean ,surface_net_downward_longwave_flux,-,-
+athb_t         ,ATHB_T     ,-,0,mean ,net_downward_longwave_flux_in_air,-,-
+c_t_lk         ,C_T_LK     ,-,0,point,-,-,-
+cape_ml        ,CAPE_ML    ,-,0,point,atmosphere_convective_available_potential_energy_wrt_surface,-,-
+cape           ,CAPE_CON   ,-,0,point,atmosphere_specific_convective_available_potential_energy,-,-
+cin_ml         ,CIN_ML     ,-,0,point,atmosphere_convective_inhibition_wrt_surface,-,-
+cin            ,CIN_CON    ,-,0,point,-,-,-
+clc            ,CLC        ,-,0,point,cloud_area_fraction_in_atmosphere_layer,-,-
+clch           ,CLCH       ,ACLCH,0,point,cloud_area_fraction_in_atmosphere_layer,-,-
+clcm           ,CLCM       ,ACLCM,0,point,cloud_area_fraction_in_atmosphere_layer,-,-
+clcl           ,CLCL       ,ACLCL,0,point,cloud_area_fraction_in_atmosphere_layer,-,-
+clct           ,CLCT       ,ACLCT,0,point,cloud_area_fraction,-,-
+clct_mod       ,CLCT_MOD   ,-,0,point,cloud_area_fraction,-,-
+depth_lk       ,DEPTH_LK   ,-,0,point,sea_floor_depth_below_sea_level,-,-
+ddt_tke_pconv  ,DTKE_CON   ,-,0,point,-,-,-
+drag_u_grid    ,DRAG_U_GRID,ADRAG_U_GRID,0,point,surface_downward_eastward_stress,surface_downward_eastward_stress,Pa
+drag_v_grid    ,DRAG_V_GRID,ADRAG_V_GRID,0,point,surface_downward_northward_stress,surface_downward_northward_stress,Pa
+dursun         ,DURSUN   ,-,0,sum,duration_of_sunshine,duration_of_sunshine,s
+geopot         ,FI         ,-,0,point,geopotential,-,-
+fr_glac        ,FR_GLAC    ,-,0,point,land_ice_area_fraction,-,-
+fr_lake        ,FR_LAKE    ,-,0,point,-,-,-
+fr_land        ,FR_LAND    ,-,0,point,land_area_fraction,-,-
+fr_seaice      ,FR_SEAICE  ,-,0,point,sea_ice_area_fraction,-,-
+fr_paved       ,FR_PAVED   ,-,0,point,paved_area_fraction,-,-
+fr_urb_smt     ,FR_URB     ,-,0,point,urban_area_fraction,-,-
+freshsnow      ,FRESHSNW   ,-,0,point,-,-,-
+graupel_gsp    ,GRAUPEL_GSP   ,-,0,sum  ,large_scale_graupel_amount,-,-
+h_b1_lk        ,H_B1_LK,-,0,point,- ,-,-
+h_ice          ,H_ICE      ,-,0,point,sea_ice_thickness,-,-
+h_ml_lk        ,H_ML_LK    ,-,0,point,-,-,-
+h_snow         ,H_SNOW     ,-,0,point,surface_snow_thickness,-,-
+dzh_snow       ,H_SNOW_M   ,-,0,point,snow_layers_height_where_snow,-,-
+z_ifc          ,HHL        ,-,0,point,altitude,-,-
+z_mc           ,HFL        ,-,0,point,altitude,-,-
+hpbl           ,HPBL       ,-,0,point,-,-,-
+topography_c   ,HSURF      ,-,0,point,surface_altitude,-,-
+lai            ,LAI        ,-,0,point,leaf_area_index,-,-
+lhfl_s         ,LHFL_S     ,ALHFL_S,0,point,surface_downward_latent_heat_flux,surface_downward_latent_heat_flux,W m-2
+omega          ,OMEGA      ,-,0,point,lagrangian_tendency_of_air_pressure,-,-
+pres           ,P          ,-,0,point,air_pressure,-,-
+plantevap      ,PLEVAP_S   ,APLEVAP_S,0,point,plant_water_evaporation_flux,plant_water_evaporation_amount,kg m-2
+plcov          ,PLCOV      ,-,0,point,vegetation_area_fraction,-,-
+pres_msl       ,PMSL       ,-,0,point,air_pressure_at_sea_level,-,-
+pres_sfc       ,PS         ,-,0,point,surface_air_pressure,-,-
+qc             ,QC         ,-,0,point,mass_fraction_of_cloud_liquid_water_in_air,-,-
+qg             ,QG         ,-,0,point,mass_fraction_of_graupel_in_air,-,-
+qhfl_s         ,QHFL_S     ,AEVAP_S,0,point,surface_water_evaporation_flux,water_evaporation_amount,kg m-2
+qi             ,QI         ,-,0,point,mass_fraction_of_cloud_ice_in_air,-,-
+qr             ,QR         ,-,0,point,mass_fraction_of_rain_in_air,-,-
+qs             ,QS         ,-,0,point,mass_fraction_of_snow_in_air,-,-
+qv             ,QV         ,-,0,point,specific_humidity,-,-
+qv_2m          ,QV_2M      ,-,2,point,specific_humidity,-,-
+qv_s           ,QV_S       ,-,0,point,surface_specific_humidity,-,-
+rain_con       ,RAIN_CON   ,-,0,sum  ,convective_rainfall_amount,-,-
+rain_gsp       ,RAIN_GSP   ,-,0,sum  ,large_scale_rainfall_amount,-,-
+resid_wso      ,RESID_WSO  ,-,0,sum  ,residuum_of_mass_content_of_water_in_soil,-,-
+rh             ,RELHUM     ,-,0,point,relative_humidity,-,-
+rh_2m          ,RELHUM_2M  ,ARELHUM_2M,2,point,relative_humidity,-,-
+rho_snow       ,RHO_SNOW   ,-,0,point,surface_snow_density,-,-
+rho_snow_mult  ,RHO_SNOW_M ,-,0,point,surface_snow_density,-,-
+rho            ,RHO_TOT    ,-,0,point,air_density,-,-
+rootdp         ,ROOTDP     ,-,0,point,root_depth,-,-
+runoff_g       ,RUNOFF_G   ,-,0,sum  ,subsurface_runoff_amount,-,-
+runoff_s       ,RUNOFF_S   ,-,0,sum  ,surface_runoff_amount,-,-
+runoff_s_t_1   ,RUNOFF_S_T_1 ,-,0,sum  ,surface_runoff_amount,-,-
+runoff_s_t_2   ,RUNOFF_S_T_2 ,-,0,sum  ,surface_runoff_amount,-,-
+runoff_s_t_3   ,RUNOFF_S_T_3 ,-,0,sum  ,surface_runoff_amount,-,-
+runoff_s_t_4   ,RUNOFF_S_T_4 ,-,0,sum  ,surface_runoff_amount,-,-
+runoff_s_t_5   ,RUNOFF_S_T_5 ,-,0,sum  ,surface_runoff_amount,-,-
+runoff_s_t_6   ,RUNOFF_S_T_6 ,-,0,sum  ,surface_runoff_amount,-,-
+runoff_s_t_7   ,RUNOFF_S_T_7 ,-,0,sum  ,surface_runoff_amount,-,-
+runoff_s_t_8   ,RUNOFF_S_T_8 ,-,0,sum  ,surface_runoff_amount,-,-
+runoff_s_t_9   ,RUNOFF_S_T_9 ,-,0,sum  ,surface_runoff_amount,-,-
+shfl_s         ,SHFL_S     ,ASHFL_S,0,point,surface_downward_sensible_heat_flux,surface_downward_sensible_heat_flux,W m-2
+smi            ,SMI        ,-,0,point,-,-,-
+snow_con       ,SNOW_CON   ,-,0,sum  ,convective_snowfall_amount,-,-
+snow_gsp       ,SNOW_GSP   ,-,0,sum  ,large_scale_snowfall_amount,-,-
+snow_melt      ,SNOW_MELT  ,-,0,sum  ,surface_snow_melt_amount,surface_snow_melt_amount,kg m-2
+snowfrac       ,FR_SNOW    ,-,0,point,surface_snow_area_fraction,-,-
+sob_s          ,SOBS_RAD   ,ASOB_S,0,point,surface_net_downward_shortwave_flux,surface_net_downward_shortwave_flux,W m-2
+sob_t          ,SOBT_RAD   ,ASOB_T,0,point,net_downward_shortwave_flux_in_air,net_downward_shortwave_flux_in_air,W m-2
+sod_t          ,SODT_RAD   ,ASOD_T,0,point,toa_incoming_shortwave_flux,toa_incoming_shortwave_flux,W m-2
+soiltyp        ,SOILTYP    ,-,0,point,soil_type,-,-
+sodifd_s       ,SODIFD_S   ,ASODIFD_S,0,point,surface_diffuse_downwelling_shortwave_flux_in_air,surface_diffuse_downwelling_shortwave_flux_in_air,W m-2
+sou_s          ,SODIFU_S   ,ASODIFU_S,0,point,surface_upwelling_shortwave_flux_in_air,surface_upwelling_shortwave_flux_in_air,W m-2
+temp           ,T          ,-,0,point,air_temperature,-,-
+t_2m           ,T_2M       ,AT_2M,2,point,air_temperature,-,-
+t_b1_lk        ,T_B1_LK,-,0,point,-,-,-
+t_bot_lk       ,T_BOT_LK   ,-,0,point,-,-,-
+t_g            ,T_G        ,-,0,point,surface_temperature,-,-
+t_ice          ,T_ICE      ,-,0,point,-,-,-
+t_mnw_lk       ,T_MNW_LK   ,-,0,point,-,-,-
+t_s            ,T_S        ,-,0,point,soil_temperature,-,-
+t_snow         ,T_SNOW     ,-,0,point,surface_temperature_where_snow,-,-
+t_snow_mult    ,T_SNOW_M   ,-,0,point,snow_temperature_where_snow,-,-
+t_so           ,T_SO       ,-,0,point,solid_earth_subsurface_temperature,-,-
+t_wml_lk       ,T_WML_LK   ,-,0,point,-,-,-
+td_2m          ,TD_2M      ,-,2,point,dew_point_temperature,-,-
+tch            ,ATCH       ,-,0,mean,-,-,-
+thb_s          ,THBS_RAD   ,ATHB_S,0,point,surface_net_downward_longwave_flux,surface_net_downward_longwave_flux,W m-2
+thb_t          ,THBT_RAD   ,ATHB_T,0,point,toa_net_downward_longwave_flux,toa_net_downward_longwave_flux,W m-2
+thu_s          ,THUS_RAD   ,ATHU_S,0,point,surface_upwelling_longwave_flux_in_air,surface_upwelling_longwave_flux_in_air,W m-2
+tke            ,TKE        ,-,0,point,specific_kinetic_energy_of_air,-,-
+tkvh           ,ATKVH      ,-,0,mean,-,-,-
+tmax_2m        ,TMAX_2M    ,-,2,maximum  ,air_temperature,-,-
+tmin_2m        ,TMIN_2M    ,-,2,minimum  ,air_temperature,-,-
+tot_prec       ,TOT_PREC   ,-,0,sum  ,precipitation_amount,-,-
+tot_prec_d     ,TOT_PREC_10min   ,-,0,sum  ,precipitation_amount,-,-
+tqc            ,TQC        ,-,0,point,atmosphere_cloud_liquid_water_content,-,-
+tqg            ,TQG        ,-,0,point,atmosphere_graupel_content,-,-
+tqi            ,TQI        ,-,0,point,atmosphere_cloud_ice_content,-,-
+tqr            ,TQR        ,-,0,point,atmosphere_rain_content,-,-
+tqs            ,TQS        ,-,0,point,atmosphere_snow_content,-,-
+tqv            ,TQV        ,-,0,point,atmosphere_mass_content_of_water_vapor,-,-
+u              ,U          ,-,0,point,eastward_wind,-,-
+u_10m          ,U_10M      ,-,10,point,eastward_wind,-,-
+umfl_s         ,UMFL_S     ,AUMFL_S,0,point,surface_downward_eastward_stress,surface_downward_eastward_stress,N m-2
+v              ,V          ,-,0,point,northward_wind,-,-
+v_10m          ,V_10M      ,-,10,point,northward_wind,-,-
+vmfl_s         ,VMFL_S     ,AVMFL_S,0,point,surface_downward_northward_stress,surface_downward_northward_stress,N m-2
+sp_10m         ,SP_10M     ,-,10,point,wind_speed,-,-
+gust10         ,SPGUST_10M ,-,10,maximum  ,wind_speed_of_gust,-,-
+vor            ,VORTIC_W   ,-,0,point,atmosphere_upward_relative_vorticity,-,-
+w              ,W          ,-,0,point,upward_air_velocity,-,-
+w_i            ,W_I        ,-,0,point,lwe_thickness_of_canopy_water_amount,-,-
+w_snow         ,W_SNOW     ,-,0,point,lwe_thickness_of_surface_snow_amount,-,-
+wtot_snow      ,W_SNOW_M   ,-,0,point,snow_total_water_content,-,-
+w_so           ,W_SO       ,-,0,point,lwe_thickness_of_moisture_content_of_soil_layer,-,-
+w_so_ice       ,W_SO_ICE   ,-,0,point,lwe_thickness_of_frozen_water_content_of_soil_layer,-,-
+wliq_snow      ,WLIQ_SNOW  ,-,0,point,snow_liquid_water_content,-,-
+gz0            ,Z0         ,-,0,point,surface_roughness_length,-,-
+t_sk           ,T_SKIN     ,-,0,point ,- ,- ,-
+alb_si         ,ALB_SEAICE ,-,0,point ,sea_ice_albedo ,sea_ice_albedo ,-
+sli            ,SLI        ,-,0,point,surface_lifted_index,-,K
+swflx_dn_clr   ,SWFLX_DN_CS ,-,0,point,downwelling_shortwave_flux_in_air_assuming_clear_sky,-,W m-2
+swflx_up_clr   ,SWFLX_UP_CS ,-,0,point,upwelling_shortwave_flux_in_air_assuming_clear_sky,-,W m-2
+lwflx_dn_clr   ,LWFLX_DN_CS ,-,0,point,downwelling_longwave_flux_in_air_assuming_clear_sky,-,W m-2
+lwflx_up_clr   ,LWFLX_UP_CS ,-,0,point,upwelling_longwave_flux_in_air_assuming_clear_sky,-,W m-2

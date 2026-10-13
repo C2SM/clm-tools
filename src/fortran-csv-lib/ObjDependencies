@@ -1,0 +1,22 @@
+#
+####################################################
+#
+#     Dependencies of the Fortran Modules
+#
+####################################################
+#
+$(OBJDIR)/csv_kinds.o:            $(SRCDIR)/csv_kinds.f90 
+	( cd $(OBJDIR) && echo Compile ${@F} && $(FC) $(FFLAGS) $(SRCDIR)/csv_kinds.f90 )
+#
+$(OBJDIR)/csv_module.o:            $(SRCDIR)/csv_module.F90 \
+	$(OBJDIR)/csv_kinds.o  $(OBJDIR)/csv_parameters.o  $(OBJDIR)/csv_utilities.o 
+	( cd $(OBJDIR) && echo Compile ${@F} && $(FC) $(FFLAGS) $(SRCDIR)/csv_module.F90 )
+#
+$(OBJDIR)/csv_parameters.o:            $(SRCDIR)/csv_parameters.f90 \
+	$(OBJDIR)/csv_kinds.o
+	( cd $(OBJDIR) && echo Compile ${@F} && $(FC) $(FFLAGS) $(SRCDIR)/csv_parameters.f90 )
+#
+$(OBJDIR)/csv_utilities.o:            $(SRCDIR)/csv_utilities.f90 \
+	$(OBJDIR)/csv_kinds.o  $(OBJDIR)/csv_parameters.o
+	( cd $(OBJDIR) && echo Compile ${@F} && $(FC) $(FFLAGS) $(SRCDIR)/csv_utilities.f90 )
+#
