@@ -1,0 +1,25 @@
+#########
+# CPE Fortran at HLRS Hunter
+#########
+#
+
+CSV_ROOT = $(PARENTDIR)/fortran-csv-lib
+CSV_INC = -I${CSV_ROOT}/include
+CSV_LIB = -L${CSV_ROOT}/lib -lcsv
+
+#
+# name and path of standard binary to be produced
+CCAF2ICAF_PROGRAM      = bin/ccaf2icaf
+CORRECT_CF_PROGRAM     = bin/correct_cf
+#
+
+# compiler, options and libraries
+
+FC          = ftn
+
+FFLAGS      = -c -M878 ${CSV_INC}
+
+LDFLAGS     = ${CSV_LIB}
+
+#LIBS        = ${NC_LIB} ${CSV_LIB}
+#LIBS       += -Wl,-rpath,$(NETCDFF_ROOT)/lib:$(NETCDFC_ROOT)/lib:$(CSV_ROOT)/lib

@@ -1,0 +1,26 @@
+#########
+# Gnu Fortran at DKRZ Levante
+#########
+#
+
+#... netCDF
+NETCDFC_ROOT=/sw/spack-levante/netcdf-c-4.8.1-6qheqr
+NETCDFF_ROOT=/sw/spack-levante/netcdf-fortran-4.5.3-jlxcfz
+
+NC_INC  = -I${NETCDFF_ROOT}/include
+NC_LIB  =  -L${NETCDFF_ROOT}/lib -lnetcdff 
+NC_LIB  += -L${NETCDFC_ROOT}/lib -lnetcdf
+
+# standard binary
+PROGRAM      = bin/cfu
+
+# compiler, options and libraries
+
+FC          = gfortran
+FFLAGS       = -c -ffree-line-length-0 -march=core-avx2 ${NC_INC} 
+
+LDFLAGS      = 
+
+LIBS         = ${NC_LIB}
+LIBS        += -Wl,-rpath,$(NETCDFF_ROOT)/lib:$(NETCDFC_ROOT)/lib
+

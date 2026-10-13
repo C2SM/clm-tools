@@ -1,0 +1,42 @@
+#########
+# GNU Fortran at JSC JUWELS/JURECA-DC
+#########
+#
+# load these modules on JURECA-DC
+#MODULES='Stages/2024 GCC/12.3.0 OpenMPI/4.1.5 netCDF-Fortran/4.6.1 netCDF/4.9.2'
+#module --force purge; module load ${MODULES}
+
+#... netCDF
+NETCDFC_ROOT=${EBROOTNETCDF}
+NETCDFF_ROOT=${EBROOTNETCDFMINFORTRAN}
+
+NC_INC  = -I${NETCDFF_ROOT}/include
+NC_LIB  =  -L${NETCDFF_ROOT}/lib -lnetcdff 
+NC_LIB  += -L${NETCDFC_ROOT}/lib -lnetcdf
+
+
+# fortran-csv does not work with gfortran - use csv-fortran instead
+#CSV_ROOT = $(PARENTDIR)/fortran-csv-lib
+#CSV_INC = -I${CSV_ROOT}/include
+#CSV_LIB = -L${CSV_ROOT}/lib -lcsv
+
+CSV_ROOT = $(PARENTDIR)/csv-fortran
+CSV_INC = -I${CSV_ROOT}/fcsv_include
+CSV_LIB = -L${CSV_ROOT} -lfcsv
+
+#
+# name and path of standard binary to be produced
+CCAF2ICAF_PROGRAM      = bin/ccaf2icaf
+CORRECT_CF_PROGRAM     = bin/correct_cf
+#
+
+# compiler, options and libraries
+
+FC          = gfortran
+
+FFLAGS      = -Ofast -funroll-loops -c -ffree-line-length-0 -march=native -mpc64 ${CSV_INC} ${NC_INC}
+
+LDFLAGS     = 
+
+LIBS        = ${NC_LIB} ${CSV_LIB}
+LIBS       += -Wl,-rpath,$(NETCDFF_ROOT)/lib:$(NETCDFC_ROOT)/lib:$(CSV_ROOT)/lib

@@ -1,0 +1,10 @@
+#########
+#  DWD NEC
+#########
+#
+
+# fortran options
+FC            = ifort -c
+FFLAGS        = -I$(STDROOT)/obj
+LDFLAGS       = $(FFLAGS)
+

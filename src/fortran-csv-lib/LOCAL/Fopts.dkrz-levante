@@ -1,0 +1,10 @@
+#########
+#  GNU Fortran on DKRZ Levante
+#########
+#
+
+# fortran options
+FC            = gfortran -c -ffree-line-length-0 
+FFLAGS        = -I$(STDROOT)/obj
+LDFLAGS       = $(FFLAGS)
+

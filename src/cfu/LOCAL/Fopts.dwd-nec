@@ -1,0 +1,26 @@
+#########
+# DWD NEC
+#########
+#
+
+#... netCDF
+NETCDFF_ROOT = ${NETCDF_DIR}
+NETCDFC_ROOT = ${NETCDF_DIR}
+#
+NC_INC  = -I${NETCDFF_ROOT}/include
+NC_LIB  =  -L${NETCDFF_ROOT}/lib -lnetcdff
+NC_LIB  += -L${NETCDFC_ROOT}/lib -lnetcdf
+#
+# standard binary
+PROGRAM      = bin/cfu
+#
+# compiler, options and libraries
+#
+FC           = ifort
+FFLAGS       = -c  ${NC_INC}
+#
+LDFLAGS      =
+#
+LIBS         = ${NC_LIB}
+LIBS        += -Wl,-rpath,$(NETCDFF_ROOT)/lib:$(NETCDFC_ROOT)/lib:/hpc/sw/intel/compilers_and_libraries_2020.0.166/linux/compiler/lib/intel64_lin
+#

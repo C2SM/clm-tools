@@ -1,0 +1,30 @@
+#########
+# DWD NEC
+#########
+
+NETCDFC_ROOT = /hpc/sw/netcdf4/4.7.3/x86/intel
+NETCDFF_ROOT = /hpc/sw/netcdf4/4.7.3/x86/intel
+
+NC_INC  = -I${NETCDFF_ROOT}/include
+NC_LIB  =  -L${NETCDFF_ROOT}/lib -lnetcdff
+NC_LIB  += -L${NETCDFC_ROOT}/lib -lnetcdf
+
+CSV_ROOT = $(PARENTDIR)/fortran-csv-lib
+CSV_INC = -I${CSV_ROOT}/include
+CSV_LIB = -L${CSV_ROOT}/lib -lcsv
+
+# name and path of standard binary to be produced
+CCAF2ICAF_PROGRAM      = bin/ccaf2icaf
+CORRECT_CF_PROGRAM     = bin/correct_cf
+
+# compiler, options and libraries
+
+FC          = ifort
+
+FFLAGS      = -c ${CSV_INC} ${NC_INC}
+
+LDFLAGS     =
+
+LIBS        = ${NC_LIB} ${CSV_LIB}
+LIBS       += -Wl,-rpath,$(NETCDFF_ROOT)/lib:$(NETCDFC_ROOT)/lib:$(CSV_ROOT)/lib:/hpc/sw/intel/compilers_and_libraries_2020.0.166/linux/compiler/lib/intel64_lin:/hpc/sw/hdf5/1.10.5/x86/intel/lib
+

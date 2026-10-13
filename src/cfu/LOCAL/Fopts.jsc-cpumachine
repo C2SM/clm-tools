@@ -1,0 +1,29 @@
+#########
+# Gnu Fortran at JSC JURECA-DC
+#########
+#
+# load these modules on JURECA-DC before compilation
+#MODULES='Stages/2024 GCC/12.3.0 OpenMPI/4.1.5 netCDF-Fortran/4.6.1 netCDF/4.9.2'
+#module --force purge; module load ${MODULES}
+
+#... netCDF
+NETCDFC_ROOT=${EBROOTNETCDF}
+NETCDFF_ROOT=${EBROOTNETCDFMINFORTRAN}
+
+NC_INC  = -I${NETCDFF_ROOT}/include
+NC_LIB  =  -L${NETCDFF_ROOT}/lib -lnetcdff 
+NC_LIB  += -L${NETCDFC_ROOT}/lib -lnetcdf
+
+# standard binary
+PROGRAM      = bin/cfu
+
+# compiler, options and libraries
+
+FC          = gfortran
+FFLAGS       = -Ofast -funroll-loops -c -ffree-line-length-0 -march=native -mpc64 ${NC_INC} 
+
+LDFLAGS      = 
+
+LIBS         = ${NC_LIB}
+LIBS        += -Wl,-rpath,$(NETCDFF_ROOT)/lib:$(NETCDFC_ROOT)/lib
+

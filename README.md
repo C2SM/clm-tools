@@ -17,30 +17,44 @@ content is unchanged, so that fixes can be synchronized with SPICE.
 | `src/fortran-csv-lib` | `src/fortran-csv-lib` | CSV library required by `src/utils` |
 | `src/python_util` | `src/python_util` | `correct_cf.py` and `samovar.py` |
 | `src/samovar` | `src/samovar` | SAMOVAR range checks (`samovar.sh` and variable tables) |
-| `scripts` | `configure_scripts/template_gcm2icon/scripts` | shell function library `functions.inc` and `calc_potevap_s.py` |
+| `scripts` | `configure_scripts/template_gcm2icon/scripts` | shell function library `functions.sh` (`functions.inc` in SPICE) and `calc_potevap_s.py` |
 | `data/csv` | `data/csv` | variable mapping table `mapping_to_cosmo.csv` |
-
-Differences from SPICE:
-
-- Only the build options for CSCS Alps (`LOCAL/Fopts.cscs-alps`) are included.
-- The Python requirements are pinned to the versions used for the SPICE reference runs.
-- `install.sh` replaces the build part of the SPICE configure script.
+| `systems` | `configure_scripts/config.sh`, `system_settings.tmpl` | environment and Python interpreter per HPC system |
 
 ## Installation
 
-On CSCS Alps, inside the `climtools` uenv:
-
 ```bash
-./install.sh
+./install.sh <system>
 ```
 
 This builds `src/cfu/bin/cfu`, `src/utils/bin/ccaf2icaf` and `src/utils/bin/correct_cf`
-and creates the Python environment `venv/`.
+with the compiler settings in `src/*/LOCAL/Fopts.<system>` and creates the Python
+environment `venv/`. Supported systems:
+
+| System | Machine | Notes | Tested with clm-tools |
+|--------|---------|-------|-----------------------|
+| `cscs-alps` | CSCS Alps | run inside the `climtools` uenv; Python versions pinned in `systems/cscs-alps.constraints.txt` | yes |
+| `dkrz-levante` | DKRZ Levante | loads the `gcc` module | no |
+| `dwd-nec` | DWD NEC | Python 3.8 | no |
+| `hlrs_cpe` | HLRS Hunter | Cray Programming Environment | no |
+| `jsc-cpumachine` | JSC JURECA-DC | loads modules; builds `csv-fortran` (cloned from GitHub) instead of `fortran-csv-lib` | no |
+
+The settings of the untested systems are taken from SPICE. To add a system, create
+`systems/<system>.sh` (environment and `PYTHON`) and the `Fopts.<system>` files in
+`src/fortran-csv-lib/LOCAL`, `src/cfu/LOCAL` and `src/utils/LOCAL`.
+
+## Differences from SPICE
+
+- `functions.inc` is renamed to `functions.sh`.
+- `install.sh` and `systems/` replace the build part of the SPICE configure script.
+- The SAMOVAR Fortran program is not included, since SPICE uses `samovar.py` on all systems.
+- `systems/hlrs_cpe.sh` uses `/opt/cray/pe/python/3.11.7/bin/python3`; SPICE sets the
+  directory `/opt/cray/pe/python/3.11.7/bin` as Python interpreter.
 
 ## Outlook
 
 The current state is a direct copy. Planned improvements are a cleaned-up interface
-(for example `functions.inc` without SPICE-specific global variables) and a possible
+(for example `functions.sh` without SPICE-specific global variables) and a possible
 move to the CLM-Community GitLab.
 
 ## License

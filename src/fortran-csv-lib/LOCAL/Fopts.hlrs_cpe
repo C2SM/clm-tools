@@ -1,0 +1,9 @@
+#########
+#  CPE Fortran on HLRS Hunter
+#########
+#
+
+# fortran options
+FC            = ftn -c
+FFLAGS        = -I$(STDROOT)/obj
+LDFLAGS       = $(FFLAGS)

@@ -1,0 +1,6 @@
+# Versions used for the SPICE reference runs on CSCS Alps
+xarray==2026.7.0
+pandas==3.0.5
+numpy==2.5.3
+netcdf4==1.7.4
+scipy==1.18.1

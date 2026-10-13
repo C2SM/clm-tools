@@ -1,0 +1,27 @@
+#########
+# CPE Fortran at HLRS Hunter
+#########
+#
+
+#... netCDF (there is information about NetCDF tool in modules)
+#NETCDFC_ROOT=
+#NETCDFF_ROOT=
+
+#NC_INC  = -I${NETCDFF_ROOT}/include
+#NC_LIB  =  -L${NETCDFF_ROOT}/lib -lnetcdff
+#NC_LIB  += -L${NETCDFC_ROOT}/lib -lnetcdf
+
+# standard binary
+PROGRAM = bin/cfu
+
+# compiler, options and libraries
+
+FC      = ftn
+FFLAGS  = -c
+
+# .. All these properties are in compiler memory:
+LDFLAGS =
+
+#LIBS  =
+#LIBS += -Wl,-rpath,$(NETCDFF_ROOT)/lib:$(NETCDFC_ROOT)/lib
+
